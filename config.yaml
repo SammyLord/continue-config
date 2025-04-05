@@ -1,0 +1,55 @@
+name: Local Assistant
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Claude 3.7
+    provider: openai
+    model: claude-3.7-sonnet
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://gpt4free.nodemixaholic.com/v1
+    apiKey: x
+    roles:
+      - chat
+      - edit
+      - autocomplete
+  - name: ChatGPT o3 mini
+    provider: openai
+    model: o3-mini
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://gpt4free.nodemixaholic.com/v1
+    apiKey: x
+    roles:
+      - chat
+      - edit
+  - name: Qwen 2.5 Coder 32b
+    provider: openai
+    model: qwen-2.5-coder-32b
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://gpt4free.nodemixaholic.com/v1
+    apiKey: x
+    roles:
+      - chat
+      - edit
+  - name: Samantha Thinker
+    provider: openai
+    model: sparksammy/samantha-thinker-v2:latest
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://ollama-api.nodemixaholic.com/v1
+    apiKey: x
+    roles:
+      - chat
+      - edit
+
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
