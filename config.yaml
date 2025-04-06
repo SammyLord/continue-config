@@ -44,6 +44,16 @@ models:
     roles:
       - chat
       - edit
+  - name: Samantha Claude
+    provider: openai
+    model: samantha-claude
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://ai.nodemixaholic.com/api
+    apiKey: sk-f991e22dce8a4e348fd3ab663bfb3970
+    roles:
+      - chat
+      - edit
 
 context:
   - provider: code
