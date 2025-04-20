@@ -3,33 +3,23 @@ version: 1.0.0
 schema: v1
 
 models:
-  - name: Claude 3.7
+  - name: Samantha Coder
     provider: openai
-    model: claude-3.7-sonnet
+    model: sparksammy/samantha-thinker-q2.5:smol
     env:
       useLegacyCompletionsEndpoint: false
-    apiBase: https://gpt4free.nodemixaholic.com/v1
+    apiBase: https://ollama-api.nodemixaholic.com/v1
     apiKey: x
     roles:
       - chat
       - edit
       - autocomplete
-  - name: ChatGPT o3 mini
+  - name: Samantha Gemma 3 (SamGem3)
     provider: openai
-    model: o3-mini
+    model: sparksammy/samgem:latest
     env:
       useLegacyCompletionsEndpoint: false
-    apiBase: https://gpt4free.nodemixaholic.com/v1
-    apiKey: x
-    roles:
-      - chat
-      - edit
-  - name: Qwen 2.5 Coder 32b
-    provider: openai
-    model: qwen-2.5-coder-32b
-    env:
-      useLegacyCompletionsEndpoint: false
-    apiBase: https://gpt4free.nodemixaholic.com/v1
+    apiBase: https://ollama-api.nodemixaholic.com/v1
     apiKey: x
     roles:
       - chat
@@ -41,16 +31,6 @@ models:
       useLegacyCompletionsEndpoint: false
     apiBase: https://ollama-api.nodemixaholic.com/v1
     apiKey: x
-    roles:
-      - chat
-      - edit
-  - name: Samantha Claude
-    provider: openai
-    model: samantha-claude
-    env:
-      useLegacyCompletionsEndpoint: false
-    apiBase: https://ai.nodemixaholic.com/api
-    apiKey: sk-f991e22dce8a4e348fd3ab663bfb3970
     roles:
       - chat
       - edit
