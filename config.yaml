@@ -5,7 +5,7 @@ schema: v1
 models:
   - name: Samantha Coder
     provider: openai
-    model: sparksammy/samantha-thinker-q2.5:smol
+    model: sparksammy/samantha-coder-q2.5:smol
     env:
       useLegacyCompletionsEndpoint: false
     apiBase: https://ollama-api.nodemixaholic.com/v1
@@ -43,3 +43,4 @@ context:
   - provider: problems
   - provider: folder
   - provider: codebase
+
