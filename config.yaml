@@ -3,37 +3,47 @@ version: 1.0.0
 schema: v1
 
 models:
-  - name: Samantha Coder
+  - name: Samantha LLAMA
     provider: openai
-    model: sparksammy/samantha-coder-q2.5:smol
+    model: samantha-llama-4-scout
     env:
       useLegacyCompletionsEndpoint: false
-    apiBase: https://ollama-api.nodemixaholic.com/v1
-    apiKey: x
+    apiBase: https://personal-ai.nodemixaholic.com/api
+    apiKey: sk-756bf7f63b8c42589775e8efc28163bd
+    roles:
+      - chat
+      - edit
+  - name: Samantha GROK
+    provider: openai
+    model: samantha-grok
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://personal-ai.nodemixaholic.com/api
+    apiKey: sk-756bf7f63b8c42589775e8efc28163bd
+    roles:
+      - chat
+      - edit
+- name: ROBLOX Assistant
+    provider: openai
+    model: openai-roblox-withprompt
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://personal-ai.nodemixaholic.com/api
+    apiKey: sk-756bf7f63b8c42589775e8efc28163bd
+    roles:
+      - chat
+      - edit
+  - name: Samantha Coder
+    provider: openai
+    model: sparksammy/samantha-coder-q2.5:smolr
+    env:
+      useLegacyCompletionsEndpoint: false
+    apiBase: https://personal-ai.nodemixaholic.com/api
+    apiKey: sk-756bf7f63b8c42589775e8efc28163bd
     roles:
       - chat
       - edit
       - autocomplete
-  - name: Samantha Gemma 3 (SamGem3)
-    provider: openai
-    model: sparksammy/samgem:latest
-    env:
-      useLegacyCompletionsEndpoint: false
-    apiBase: https://ollama-api.nodemixaholic.com/v1
-    apiKey: x
-    roles:
-      - chat
-      - edit
-  - name: Samantha Thinker
-    provider: openai
-    model: sparksammy/samantha-thinker-v2:latest
-    env:
-      useLegacyCompletionsEndpoint: false
-    apiBase: https://ollama-api.nodemixaholic.com/v1
-    apiKey: x
-    roles:
-      - chat
-      - edit
 
 context:
   - provider: code
