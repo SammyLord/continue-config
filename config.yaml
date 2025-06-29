@@ -23,7 +23,7 @@ models:
     roles:
       - chat
       - edit
-- name: ROBLOX Assistant
+  - name: ROBLOX Assistant
     provider: openai
     model: openai-roblox-withprompt
     env:
